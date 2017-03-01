@@ -1,0 +1,17 @@
+{
+  "name": "ionic1tutorial",
+  "description": "explore ionic app dev",
+  "main": "",
+  "authors": [
+    "pruthvi"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

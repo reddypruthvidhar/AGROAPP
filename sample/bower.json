@@ -1,0 +1,22 @@
+{
+  "name": "sample",
+  "description": "sample ionic angular test project to explore both",
+  "main": "sample",
+  "authors": [
+    "pruthvi"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular-bootstrap": "^2.5.0"
+  }
+}
