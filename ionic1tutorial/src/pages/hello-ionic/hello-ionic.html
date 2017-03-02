@@ -8,21 +8,26 @@
 </ion-header>
 
 
-<ion-content padding>
-
-  <h3>Welcome to KSTATE AGRONOMY app!</h3>
-
-  <p>
-    This starter project is our way of helping you get a functional app running in record time.
-  </p>
-
-  <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
-  </p>
+<ion-content padding class="home">
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <h3>Welcome to KSTATE AGRONOMY app!</h3>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+        <iframe src="http://www.agronomy.k-state.edu/services/crop-performance-tests/corn/index.html"></iframe>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  <!--test code for jquery displaying single element
+  <script>
+    $('#x').load('http://www.agronomy.k-state.edu/services/crop-performance-tests/corn/index.html #ksu-main-content');
+  </script>
   <div>
-    <iframe src="http://www.agronomy.k-state.edu/services/crop-performance-tests/corn/index.html"></iframe>
+    <div id="x"></div>
   </div>
+  -->
+
 </ion-content>
