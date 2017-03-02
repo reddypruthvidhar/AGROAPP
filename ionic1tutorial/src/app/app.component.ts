@@ -4,6 +4,10 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { StatusBar, Splashscreen } from 'ionic-native';
 
+import {Http} from '@angular/http';
+
+import 'rxjs/add/operator/map';
+
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ListPage } from '../pages/list/list';
 
@@ -17,10 +21,12 @@ export class MyApp {
   // make HelloIonicPage the root (or first) page
   rootPage: any = HelloIonicPage;
   pages: Array<{title: string, component: any}>;
+  posts:any;
 
   constructor(
     public platform: Platform,
-    public menu: MenuController
+    public menu: MenuController,
+    public http: Http
   ) {
     this.initializeApp();
 
@@ -29,7 +35,13 @@ export class MyApp {
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage }
     ];
+
+    this.http.get('https://www.reddit.com/r/gifs/new/.json?limit=10').map(res => res.json()).subscribe(data => {
+      this.posts = data.data.children;
+    });
   }
+
+
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -37,6 +49,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
       Splashscreen.hide();
+
     });
   }
 
