@@ -6,10 +6,13 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import {Http} from '@angular/http';
 
+//for map operator
 import 'rxjs/add/operator/map';
 
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
+import { CornPubs } from '../pages/cornpubs/cornpubs';
 import { ListPage } from '../pages/list/list';
+import { CornDev } from '../pages/corndev/corndev';
+import { CornPerf } from '../pages/cornperf/cornperf';
 
 
 @Component({
@@ -19,9 +22,8 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage: any = HelloIonicPage;
+  rootPage: any = CornPubs;
   pages: Array<{title: string, component: any}>;
-  posts:any;
 
   constructor(
     public platform: Platform,
@@ -32,13 +34,12 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage }
+      { title: 'CORN PUBLICATIONS', component: CornPubs },
+      //{ title: 'My First List', component: ListPage },
+      { title: 'CORN DEV', component: CornDev },
+      { title: 'CORN PERFORMENCE', component: CornPerf}
     ];
 
-    this.http.get('https://www.reddit.com/r/gifs/new/.json?limit=10').map(res => res.json()).subscribe(data => {
-      this.posts = data.data.children;
-    });
   }
 
 

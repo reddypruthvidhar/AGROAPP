@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController, NavParams } from 'ionic-angular';
 
-import { ItemDetailsPage } from '../item-details/item-details';
+//import { ItemDetailsPage } from '../item-details/item-details';removing item details page
 
 
 @Component({
@@ -10,6 +10,8 @@ import { ItemDetailsPage } from '../item-details/item-details';
   templateUrl: 'list.html'
 })
 export class ListPage {
+
+/* code for items list
   selectedItem: any;
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
@@ -36,4 +38,5 @@ export class ListPage {
       item: item
     });
   }
+  */
 }

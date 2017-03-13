@@ -1,16 +1,21 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { PdfViewerComponent } from 'ng2-pdf-viewer';
 import { MyApp } from './app.component';
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ItemDetailsPage } from '../pages/item-details/item-details';
+import { CornPubs } from '../pages/cornpubs/cornpubs';
+import { CornDev } from '../pages/corndev/corndev';
+import { CornPerf } from '../pages/cornperf/cornperf';
+//import { ItemDetailsPage } from '../pages/item-details/item-details';removed item details page
 import { ListPage } from '../pages/list/list';
 
 @NgModule({
   declarations: [
     MyApp,
-    HelloIonicPage,
-    ItemDetailsPage,
-    ListPage
+    CornPubs,
+    CornDev,
+    CornPerf,
+    ListPage,
+    PdfViewerComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -18,8 +23,9 @@ import { ListPage } from '../pages/list/list';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HelloIonicPage,
-    ItemDetailsPage,
+    CornPubs,
+    CornDev,
+    CornPerf,
     ListPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
